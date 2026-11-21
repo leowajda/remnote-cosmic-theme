@@ -12,6 +12,18 @@
   border-color: var(--cosmic-divider);
 }
 
+:is(
+    .rn-cluster-table-container,
+    [data-test="Beautiful Queue Full Table Contents"]
+  )
+  :where(th, td):is(.border-gray-15, .border-gray-30) {
+  border-color: color-mix(
+    in srgb,
+    var(--cosmic-border) 80%,
+    var(--cosmic-divider)
+  );
+}
+
 .rn-table-add-row,
 .rn-table-add-column,
 .rn-table-add-column-placeholder {
