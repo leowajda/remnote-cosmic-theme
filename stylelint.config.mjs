@@ -1,8 +1,20 @@
 export default {
   extends: ["stylelint-config-standard"],
   referenceFiles: ["src/tokens.css", "src/remnote.css"],
-  overrides: [{ files: ["src/tokens.css"], rules: { "color-no-hex": null } }],
+  overrides: [
+    { files: ["src/tokens.css"], rules: { "color-no-hex": null } },
+    {
+      files: ["src/components/**/*.css"],
+      rules: {
+        "value-type-custom-property-required-list": [
+          ["color"],
+          { ignoreValues: ["transparent", "currentcolor"] },
+        ],
+      },
+    },
+  ],
   rules: {
+    "at-rule-disallowed-list": ["import"],
     "declaration-no-important": true,
     "no-unknown-custom-properties": true,
     "function-disallowed-list": [
