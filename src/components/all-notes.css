@@ -7,6 +7,16 @@
   background-color: var(--cosmic-hover);
 }
 
+.rn-all-notes__row.rn-clr-background-light-accent {
+  background-color: var(--cosmic-accent-soft);
+  box-shadow: inset 3px 0 var(--cosmic-accent);
+}
+
+.rn-all-notes__row:has(:focus-visible) {
+  outline: 2px solid var(--cosmic-focus);
+  outline-offset: -2px;
+}
+
 .rn-all-notes__row__date {
   color: var(--cosmic-text-2);
 }
