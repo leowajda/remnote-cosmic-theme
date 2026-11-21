@@ -5,7 +5,7 @@ on:
       - 'src/**'
       - 'manifest.json'
       - 'README.md'
-      - 'logo.png'
+      - 'assets/logo.png'
       - 'stylelint.config.mjs'
       - 'no-css-comments.yml'
       - 'releases/cosmic-*.zip'
