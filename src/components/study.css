@@ -74,9 +74,22 @@
   color: var(--cosmic-text);
 }
 
-.rn-study-deck-btn {
+.rn-flashcards-home [class*="bg-[#506cf7]"],
+.rn-flashcards-home [class*="bg-[#5098ff]"],
+.rn-flashcards-home [class*="bg-[#004ef1]"],
+.rn-flashcards-home [class*="bg-[#002d8b]"] {
   background-color: var(--cosmic-accent);
   color: var(--cosmic-on-accent);
+}
+
+.rn-study-deck-btn:not(:has([data-test="Document Queue Progress Display"])) {
+  background-color: var(--cosmic-accent);
+  color: var(--cosmic-on-accent);
+}
+
+.rn-study-deck-btn:has([data-test="Document Queue Progress Display"]) {
+  background: transparent;
+  color: inherit;
 }
 
 .rn-queue__answer-btn--forgotten,
