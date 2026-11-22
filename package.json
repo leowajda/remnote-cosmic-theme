@@ -7,11 +7,17 @@
   },
   "scripts": {
     "format": "prettier --write src *.json *.mjs",
-    "check": "prettier --check src *.json *.mjs && stylelint 'src/**/*.css' --max-warnings 0 && ast-grep scan --rule no-css-comments.yml src",
+    "check": "prettier --check src *.json *.mjs quality/*.mjs && stylelint 'src/**/*.css' --max-warnings 0 && ast-grep scan --rule no-css-comments.yml src && node quality/check.mjs",
+    "check:browser": "node quality/smoke.mjs",
+    "upstream:refresh": "node quality/upstream.mjs > quality/hooks.txt && node quality/pin.mjs",
     "build": "export LC_ALL=C; mkdir -p dist && cat src/tokens.css src/remnote.css src/components/*.css > dist/theme.css && rm -f dist/cosmic.zip && zip -qjX dist/cosmic.zip dist/theme.css manifest.json README.md assets/logo.png"
   },
   "devDependencies": {
     "@ast-grep/cli": "0.51.3",
+    "ajv": "8.20.0",
+    "axe-core": "4.14.1",
+    "css-tree": "3.2.1",
+    "playwright-core": "1.65.0",
     "prettier": "3.9.10",
     "stylelint": "18.0.0",
     "stylelint-config-standard": "41.0.0"

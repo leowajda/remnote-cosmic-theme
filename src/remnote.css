@@ -63,6 +63,7 @@
   --rn-clr-content-inverse-tertiary: var(--cosmic-inverse-text-3);
   --rn-clr-content-logo-color: var(--cosmic-accent);
   --rn-clr-border-opaque: var(--cosmic-divider);
+  --rn-clr-border-primary: var(--cosmic-divider);
   --rn-clr-border-selected: var(--cosmic-accent-text);
   --rn-clr-border-accent: var(--cosmic-accent);
   --rn-clr-border-accent-light: var(--cosmic-accent-hover);
@@ -115,6 +116,22 @@
   --rn-colors-gray-80-val: 18 18 18;
   --rn-colors-gray-90-val: 22 22 22;
   --rn-colors-gray-100-val: 18 18 18;
+  --rn-clr-black-hsl: 18, 18%, 9%;
+  --rn-colors-amber-60: var(--cosmic-warning);
+  --rn-colors-amber-70: var(--cosmic-warning);
+  --rn-colors-cyan-70: var(--cosmic-accent-text);
+  --rn-colors-green-10: var(--cosmic-success-soft);
+  --rn-colors-green-70: var(--cosmic-success);
+  --rn-colors-lime-50: var(--cosmic-success);
+  --rn-colors-purple-50: var(--cosmic-purple);
+  --rn-colors-purple-80: var(--cosmic-purple);
+  --rn-colors-red-20: var(--cosmic-destructive-soft);
+  --rn-colors-red-50: var(--cosmic-destructive);
+  --rn-colors-red-60: var(--cosmic-destructive);
+  --rn-colors-rose-80: var(--cosmic-destructive);
+  --rn-colors-teal-40: var(--cosmic-accent);
+  --rn-colors-yellow-80: var(--cosmic-warning);
+  --rn-colors-yellow-100: var(--cosmic-yellow);
   --rn-colors-blue-0: rgb(var(--rn-colors-blue-0-val));
   --rn-colors-blue-5: rgb(var(--rn-colors-blue-5-val));
   --rn-colors-blue-10: rgb(var(--rn-colors-blue-10-val));
@@ -177,6 +194,10 @@
   --highlight-color-blue: var(--cosmic-highlight-blue);
   --highlight-color-purple: var(--cosmic-highlight-purple);
   --highlight-color-green: var(--cosmic-highlight-green);
+  --highlight-color-brown: var(--cosmic-highlight-orange);
+  --highlight-color-gray: var(--cosmic-gray-5);
+  --highlight-color-pink: var(--cosmic-highlight-red);
+  --highlight-color-teal: var(--cosmic-accent-soft);
   --bg-mint-20: var(--cosmic-green);
   --bg-purple-20: var(--cosmic-purple);
   --bg-cyan-20: var(--cosmic-blue);
@@ -187,6 +208,7 @@
 }
 
 .dark.dark.dark {
+  --rn-clr-black-hsl: 0, 0%, 91%;
   --rn-clr-shadow-default: 0 1px 2px rgb(0 0 0 / 28%);
   --rn-clr-shadow-card: 0 2px 8px rgb(0 0 0 / 32%);
   --rn-clr-shadow-menu: 0 4px 16px rgb(0 0 0 / 40%);
