@@ -8,7 +8,7 @@
   "scripts": {
     "format": "prettier --write src *.json *.mjs",
     "check": "prettier --check src *.json *.mjs && stylelint 'src/**/*.css' --max-warnings 0 && ast-grep scan --rule no-css-comments.yml src",
-    "build": "export LC_ALL=C; mkdir -p dist && cat src/tokens.css src/remnote.css src/components/*.css > dist/theme.css && sed 's@]: assets/@]: https://raw.githubusercontent.com/leowajda/remnote-cosmic-theme/master/assets/@' README.md > dist/README.md && rm -f dist/cosmic.zip && zip -qjX dist/cosmic.zip dist/theme.css manifest.json dist/README.md assets/logo.png"
+    "build": "export LC_ALL=C; mkdir -p dist && cat src/tokens.css src/remnote.css src/components/*.css > dist/theme.css && rm -f dist/cosmic.zip && zip -qjX dist/cosmic.zip dist/theme.css manifest.json README.md assets/logo.png"
   },
   "devDependencies": {
     "@ast-grep/cli": "0.51.3",
